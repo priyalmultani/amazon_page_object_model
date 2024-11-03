@@ -18,9 +18,13 @@ public class BaseTest {
 		driver = new ChromeDriver();
 
         	driver.manage().window().maximize();
-        	driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
-        
+        	driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));        
 	}
-	
+
+	@AfterClass
+    	public void teardown() {
+        // Close the browser
+        driver.quit();
+    }
 }
 
