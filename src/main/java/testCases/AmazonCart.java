@@ -42,21 +42,16 @@ public class AmazonCart extends BaseTest{
 
         // Step 3: Scroll down and click on page 2
     	searchResultsPageObj.scrollPageToPage2Button();
-    	Thread.sleep(1200);
     	searchResultsPageObj.clickPage2();
 
     	//Step 4: From list go to 5th product
-    	Thread.sleep(1200);
     	searchResultsPageObj.scrollPageToFifthProduct();
         String productTitle = searchResultsPageObj.getProductTitle();
         
     	//Step 5: Click on title to open it
-    	Thread.sleep(1200);
         searchResultsPageObj.clickFifthProduct();
         
         //Switch to new tab
-    	//List<String> windowHandles = new ArrayList<>(driver.getWindowHandles());
-        //driver.switchTo().window(windowHandles.get(1));
         searchResultsPageObj.switchTab();
         
         // Step 6: Verify title
@@ -65,7 +60,6 @@ public class AmazonCart extends BaseTest{
         Assert.assertEquals(actualTitle, productTitle, "Titles do not match");
 
         // Step 7: Click on Add to Cart button
-        //ToDo - Add code for scroll till Add to Cart button
         productDetailPageObj.addToCart();
 
         //Step 8: Click on Cart button
@@ -73,7 +67,7 @@ public class AmazonCart extends BaseTest{
         
         //Step 9: Verify that product is added into the cart
         String cartProductTitle = shoppingCartPageObj.getCartProductTitle();
-	    Assert.assertEquals(cartProductTitle, productTitle, "Product is not present in the cart");
+	Assert.assertEquals(cartProductTitle, productTitle, "Product is not present in the cart");
     }
 
     @AfterClass
