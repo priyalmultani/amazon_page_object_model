@@ -1,0 +1,9 @@
+<suite name="Amazon Page Object Model">
+
+<test name="Add Product to Cart">
+<classes>
+<class name="testCases.AmazonCart"></class>
+</classes>
+</test>
+
+</suite>
