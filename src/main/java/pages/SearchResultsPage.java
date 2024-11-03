@@ -56,7 +56,6 @@ public class SearchResultsPage extends BasePage {
     public void clickFifthProduct() throws InterruptedException {
     	wait.until(ExpectedConditions.elementToBeClickable(fifthProductLink));
     	fifthProductLink.click();
-    	Thread.sleep(1200);    
     }
     
     // Method to switch to a new browser tab
