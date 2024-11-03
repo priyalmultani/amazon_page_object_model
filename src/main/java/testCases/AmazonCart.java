@@ -69,10 +69,4 @@ public class AmazonCart extends BaseTest{
         String cartProductTitle = shoppingCartPageObj.getCartProductTitle();
 	Assert.assertEquals(cartProductTitle, productTitle, "Product is not present in the cart");
     }
-
-    @AfterClass
-    public void teardown() {
-        // Close the browser
-        driver.quit();
-    }
 }
