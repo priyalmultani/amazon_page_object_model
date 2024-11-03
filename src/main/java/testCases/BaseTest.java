@@ -14,13 +14,12 @@ public class BaseTest {
 	
 	public void startup() throws IOException {
 		
-			WebDriverManager.chromedriver().setup();
-			driver = new ChromeDriver();
+		WebDriverManager.chromedriver().setup();
+		driver = new ChromeDriver();
 
-        driver.manage().window().maximize();
-        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
+        	driver.manage().window().maximize();
+        	driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
         
-        driver.get("https://www.amazon.in/");
 	}
 	
 }
